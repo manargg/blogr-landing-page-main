@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;1,300&display=swap');
+
+
+:root{
+
+/*Primary*/
+
+--Light-red : hsl(356, 100%, 66%); /*(CTA text)*/
+--Very-light-red : hsl(355, 100%, 74%); /*(CTA hover background)*/
+--Very-dark-blue : hsl(208, 49%, 24%); /*(headings)*/
+
+/*Neutral*/
+
+--White : hsl(0, 0%, 100%); /*(text)*/
+--Grayish-blue : hsl(240, 2%, 79%); /*(footer text)*/
+--Very-dark-grayish-blue: hsl(207, 13%, 34%); /* (body copy)*/
+--Very-dark-black-blue : hsl(240, 10%, 16%); /*(footer background)*/
+
+/*Gradient*/ 
+
+/*Background gradient - Intro/CTA mobile nav:*/
+
+--Background-gradient: linear-gradient(120deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+
+/*Background gradient - body:
+
+- Very dark gray blue: hsl(237, 17%, 21%)
+- Very dark desaturated blue: hsl(237, 23%, 32%)
+*/
+
+}
+*{
+    
+}
+
+body{
+    font-size: 16px;
+    font-family: "Overpass", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--White);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    color: var(--Very-dark-blue);
+}
+p{
+    line-height: 1.6px;
+}
+/*=======================================*/
+.header{
+    background: var(--Background-gradient);
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+;
+}
+
+.nav {
+    display: flex; 
+}
+
+.nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin-left: 50px;
+}
+
+.nav ul li {
+    padding: 5px;
+    position: relative;
+}
+.nav ul li i{
+    padding: 5px;
+}
+
+.nav ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.dropdown {
+     /* Initially hidden */
+     display: none; /* Initially hidden */
+     position: absolute;
+     top: 120%; /* Adjust this value if needed */
+     left: 0;
+     background-color: #f9f9f9;
+     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+     z-index: 1;
+     min-width: 150px;
+     padding: 10px 0;
+  }
+
+   
+  .dropdown.show {
+    display: block; /* Show dropdown when .show class is added */
+  }
+
+  .dropdown ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .dropdown ul li a {
+   color: var(--Very-dark-black-blue);
+  }
+ 
+.header-btn{
+    display: flex;
+}
+
+.header-btn a {
+    padding: 15px 35px;
+    box-sizing: border-box;
+}
+.header-btn a:hover{
+    padding: 15px 35px;
+    background-color: var(--Very-light-red);
+    border-radius: 50px;
+}
