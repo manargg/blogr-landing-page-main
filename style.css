@@ -68,9 +68,12 @@ h6{
 p{
     line-height: 1.6;
 }
-button{
+button, a{
     outline: none;
+    -webkit-tap-highlight-color: transparent; /* Removes highlight on tap for mobile */
+    user-select: none;
 }
+
 /*=======================================*/
 .header{
     background: 
