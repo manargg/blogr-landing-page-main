@@ -68,6 +68,9 @@ h6{
 p{
     line-height: 1.6;
 }
+button{
+    outline: none;
+}
 /*=======================================*/
 .header{
     background: 
