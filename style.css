@@ -20,7 +20,7 @@
 
 /*Background gradient - Intro/CTA mobile nav:*/
 
---Background-gradient: linear-gradient(120deg, hsl(13, 100%, 72%, 0.8), hsl(353, 100%, 62%));
+--Background-gradient: linear-gradient(120deg, hsl(13, 100%, 72%, 0.9), hsl(353, 100%, 62%,  0.9));
 --Background-gradient-2: linear-gradient(120deg, hsl(237, 17%, 21%, 0.8), hsl(237, 23%, 32%));
 
 /*Background gradient - body:
@@ -31,9 +31,7 @@
 */
 
 }
-*{
-    
-}
+
 
 body{
     font-size: 16px;
@@ -57,7 +55,9 @@ a{
     color: var(--White);
 }
 
-h1,
+h1{
+    color: var(--White);
+}
 h2,
 h3,
 h4,
@@ -74,7 +74,7 @@ p{
     var(--Background-gradient),
     url(./images/bg-pattern-intro-desktop.svg);
     background-size: cover;
-    background-position: center;
+    background-position: right center;
     border-bottom-left-radius: 100px;
     width: 100%;
 }
@@ -84,7 +84,6 @@ p{
     justify-content: space-around;
     align-items: center;
     padding-top: 20px;
-
 }
 
 .nav {
@@ -174,7 +173,7 @@ p{
     justify-content: center;
     align-items: center;
     padding-block: 100px;
-   text-align: center;
+    text-align: center;
     margin: auto;
     
 }
@@ -211,11 +210,19 @@ p{
 .menu {
     display: none;
 }
-.menu i{
+.menu button {
+    background: transparent;
+    border: none;
+
+}
+.menu button i{
     color: var(--White);
     font-size:2rem;
+    
 }
-/*================the design section=============*/
+  
+ 
+/*================the design section======================*/
 
 .design{
     display: flex;
@@ -223,101 +230,132 @@ p{
     justify-content: center;
     align-items: center;
     margin: auto;
-    margin-block: 150px 0;
+    margin-block: 100px;
     width: 100%;
-    overflow:hidden;
-   
+    overflow: hidden;
 }
 .design h1{
     font-size: 2rem;
     text-align: center;
+    padding-bottom: 50px;
 }
 .content{
     display: flex;
-    justify-content:space-between;
+    justify-content:space-around;
     align-items: center;
     margin: auto;
     width: 100%;
     position: relative;
-    padding-inline: 250px;
     top: -80px;
     gap: 80px;
 }
 
 .left-sec{
     display: flex;
+    align-items: center;
     flex-direction: column;
     row-gap: 50px;
+    
 }
 .left-sec p{
     color: var(--Very-dark-grayish-blue);
 }
+.intro, .robust{
+    width: 50%;
+} 
+.editor-desc{
+    width: 100%;
+}
 
-
-/* the art section*/
+/* ==================the art section===================*/
 
 .art{
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: red;
+    justify-content: flex-end;
     background: var(--Background-gradient-2);
     border-top-right-radius: 100px;
     border-bottom-left-radius: 100px;
     position: relative;
-    height:350px; 
-    gap: 50px;
+    width: 100%;
+    padding-block: 80px;
+    margin-bottom: 100px;
 } 
 .illustration{
+    position: absolute;
+    left: 150px;
+}
+.stateOf h2{
+    color: var(--White);
+    font-size: 2.2rem;
+}
+.stateOf  p{
+    color: var(--Grayish-blue);
+    font-size: 15px;
+}
+.stateOf {
     position: relative;
-    left: 5px;
+    width: 25%;
+    right: 200px;
+}
+/*the free section*/
+
+.content-2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 150px;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+.laptop{
+    width: 100%;
+}
+/*====================footer section====================*/
+footer{
+    background-color: var(--Very-dark-black-blue);
+    width: 100%;
+    border-top-right-radius: 100px;
 }
 
-.stateOf h2, p{
+.footer-container{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    align-items: self-start;
+    padding-block: 50px;
+    margin: auto;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    overflow: hidden;
+}
+.list h4{
     color: var(--White);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.list ul {
+    padding-left: 0;
+}
+.list ul li{
+    color: var(--Grayish-blue);
+    line-height: 1.9;
+}
 
 
 
 /*========================media-query=====================*/
+/*=====for big screens====*/
 @media (max-width: 1200px){
     .header-btn, #header-list{
-        display: none;
+       display: none;
     }
     .menu{
         display: inline;
     }
+    .nav{
+        width: 70%;
+    }
+ 
     .header-content h1{
         font-size: 3rem;
 
@@ -333,22 +371,152 @@ p{
         padding: 0;
         top: 0;
         gap: 50px;
+    
     }
-
-
-
+ 
     .editor-desc{
         order: -1;
     }
+
+
+    .art{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: var(--Background-gradient-2);
+        border-top-right-radius: 100px;
+        border-bottom-left-radius: 100px;
+        position: relative;
+        width: 100%;
+        padding-block: 230px 100px;
+        margin-block: 400px 100px;
+    } 
+
+    .illustration{
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centers the element */
+    }
+    .stateOf h2{
+        color: var(--White);
+        font-size: 2.2rem;
+    }
+    .stateOf  p{
+        color: var(--Grayish-blue);
+        font-size: 15px;
+    }
+    .stateOf {
+        position: initial;
+        width: 50%;
+        text-align: center;
+      
+    }
+
+
+    .content-2{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        margin-block: 100px;
+        width: 100%;
+        overflow: hidden;
+        gap: 100px;
+    }
+ 
+   
 }
+/*=======for mobile sizes=======*/
 
-
-@media(max-width:480px) and (min-width:320px){
+@media(max-width:600px) and (min-width:320px){
     .header{
         background: 
         var(--Background-gradient),
         url(./images/bg-pattern-intro-mobile.svg);
         background-size: cover;
-        background-position: center;
-}
+        background-position: right right;
+       } 
+      
+   
+    .header-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-block: 100px;
+        text-align: center;
+        margin: auto;
+        width: 80%;
+    
+    }
+    .header-content h1{
+        font-size: 2.5rem;
+    }
+    .header-content p{
+        font-size: 20px;
+    }
+    .nav{
+        width: 70%;
+    }
+
+    .left-sec{
+        width: 90%;
+       }
+    .intro, .robust{
+        width: 80%;
+    } 
+
+    .left-sec h2{
+        font-size: 2rem;
+       }
+    .left-sec p{
+        font-size:20px;
+       }
+
+    .editor-desc img{
+        content: url(./images/illustration-editor-mobile.svg);
+       }
+
+       /*==================the art section-=====================*/ 
+       
+    .art{
+        margin-top: 350px;
+        padding-block: 150px 100px;
+
+    } 
+  
+    .illustration{
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centers the element */
+    }
+    .illustration img{
+        content: url(./images/illustration-phones.svg);
+       }
+    .stateOf{
+        text-align: center;
+        width: 90%;
+
+    }
+    .stateOf h2{
+        font-size: 2rem;
+    }
+    .stateOf p{
+        font-size: 20px;
+    }
+
+    .laptop{
+        content: url(./images/illustration-laptop-mobile.svg);
+    }
+    
+
+    .footer-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 }
